@@ -4,33 +4,67 @@
     <meta charset="utf-8" />
     <title>eva</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <style type="text/css">
+      .lien-bleu {
+        color: #3999f1;
+      }
+      .lien-menu {
+        color: #1E416A;
+        font-weight: bold;
+      }
+      .lien-menu:hover {
+        color: #1E416A;
+      }
+      .titre {
+        color: #6E84FE;
+        font-weight: bold;
+        font-size: 64px;
+        position: relative;
+      }
+      .titre img {
+        position: relative;
+        top: -16px;
+      }
+      .lead {
+        color: #1E416A;
+        font-weight: normal;
+        font-size: 18px;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-light">
 
-    <header class="container pb-5">
-      <div class="row justify-content-between align-items-center my-3">
-        <span class="col">eva est une startup <a href="https://beta.gouv.fr/">beta.gouv.fr</a></span>
-        <span class="col text-right">
-          <img src="img/marianne.svg" width="65px">
-        </span>
+    <header>
+
+      <div class="bg-white">
+        <div class="container">
+          <div class="row justify-content-between align-items-center py-2 ">
+            <span class="col text-muted">eva est une startup <a href="https://beta.gouv.fr/" class="lien-bleu">beta.gouv.fr</a></span>
+            <span class="col text-right">
+              <img src="img/marianne.svg" width="60px">
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div class="row justify-content-between align-items-center">
-        <h1 class="col-2"><img src="img/eva.svg" alt="eva" width="72px"></h1>
+      <div class="container pt-3 pb-5">
+        <div class="row justify-content-between align-items-center">
+          <h1 class="col-2"><img src="img/eva.svg" alt="eva" width="73px"></h1>
 
-        <nav class="col text-right">
-          <a class="ml-3" href="">Compétences</a>
-          <a class="ml-3" href="">Cas d'usages</a>
-          <a class="ml-3" href="">Produits</a>
-        </nav>
+          <nav class="col text-right">
+            <a class="ml-5 lien-menu" href="">Compétences</a>
+            <a class="ml-5 lien-menu" href="">Cas d'usages</a>
+            <a class="ml-5 lien-menu" href="">Produits</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main class="container pt-5">
-      <h1><img src="img/eva.svg" class="105px" alt="eva">luer en ligne ses compétences professionnelles</h1>
+      <h1 class="titre"><img src="img/eva.svg" class="105px" alt="eva">luer en ligne ses compétences professionnelles</h1>
 
       <div class="row">
-        <p class="col col-xl-10">eva est une start-up d’état portée par le Haut commissariat aux compétences et à l’inclusion par l’emploi qui évalue les compétences transversales et cognitives au travers de mises en situation “gamifiées”. Notre objectif est d’identifier les compétences des personnes éloignées du marché de l’emploi afin de déceler des potentiels et résorber la problématique des métiers en tension qui ne trouvent pas de candidat.</p>
+        <p class="col col-xl-10 lead">eva est une start-up d’état portée par le Haut commissariat aux compétences et à l’inclusion par l’emploi qui évalue les compétences transversales et cognitives au travers de mises en situation “gamifiées”. Notre objectif est d’identifier les compétences des personnes éloignées du marché de l’emploi afin de déceler des potentiels et résorber la problématique des métiers en tension qui ne trouvent pas de candidat.</p>
       </div>
 
       <div class="row justify-content-between pt-5">
