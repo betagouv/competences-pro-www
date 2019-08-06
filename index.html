@@ -30,11 +30,62 @@
         font-weight: normal;
         font-size: 18px;
       }
+      .fond {
+        background-image: url(img/fond.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .objectif {
+        position: relative;
+        height: 250px;
+      }
+      .objectif-interieur {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        width: 230px;
+        height: 230px;
+        z-index: 5;
+      }
+      .objectif:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        left: 70px;
+        top: 50px;
+        width: 180px;
+        height: 180px;
+
+        background: linear-gradient(126.76deg, #1E416A 42.61%, rgba(216, 216, 216, 0) 83.55%);
+        mix-blend-mode: normal;
+        transform: rotate(13.5deg);
+      }
+      h2 {
+        color: #184670;
+      }
+      .button-infos {
+        position: relative;
+        left: -15%;
+      }
+      .btn-primary {
+        background-color: #6E84FE;
+        border: 0;
+        border-radius: 30px;
+      }
+
+      footer {
+        background-image: url(img/footer.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        color: white;
+      }
     </style>
   </head>
-  <body class="bg-light">
+  <body>
 
-    <header>
+    <header class="bg-light">
 
       <div class="bg-white">
         <div class="container">
@@ -60,58 +111,90 @@
       </div>
     </header>
 
-    <main class="container pt-5">
-      <h1 class="titre"><img src="img/eva.svg" class="105px" alt="eva">luer en ligne ses compétences professionnelles</h1>
+    <main>
+      <div class="bg-light pt-5">
+        <div class="container">
+          <h1 class="titre"><img src="img/eva.svg" class="105px" alt="eva">luer en ligne ses compétences professionnelles</h1>
 
-      <div class="row">
-        <p class="col col-xl-10 lead">eva est une start-up d’état portée par le Haut commissariat aux compétences et à l’inclusion par l’emploi qui évalue les compétences transversales et cognitives au travers de mises en situation “gamifiées”. Notre objectif est d’identifier les compétences des personnes éloignées du marché de l’emploi afin de déceler des potentiels et résorber la problématique des métiers en tension qui ne trouvent pas de candidat.</p>
-      </div>
-
-      <div class="row justify-content-between pt-5">
-        <div class="col-xl-3">
-          <img src="img/objectif1.svg">
-          <h1>Objectif 1</h1>
-          <p>L’approche métier exclusive est désuète. L’économie se transforme et les compétences métiers ne suffisent plus, et deviennent parfois rapidement obsolètes. Les compétences cognitives et comportementales sont de plus en plus recherchées, les métiers nécessitent plus de transversalité et de mobilité professionnelle.</p>
+          <div class="row">
+            <p class="col col-xl-10 lead">eva est une start-up d’état portée par le Haut commissariat aux compétences et à l’inclusion par l’emploi qui évalue les compétences transversales et cognitives au travers de mises en situation “gamifiées”. Notre objectif est d’identifier les compétences des personnes éloignées du marché de l’emploi afin de déceler des potentiels et résorber la problématique des métiers en tension qui ne trouvent pas de candidat.</p>
         </div>
-
-        <div class="col-xl-3">
-          <img src="img/objectif2.svg">
-          <h1>Objectif 2</h1>
-          <p>Le CV n’est plus suffisant pour évaluer les candidats. Ce dernier avantage d’emblée les candidats qui savent le mieux se présenter et les recruteurs disposent d’une image incomplète de l’individu qu’ils évaluent.</p>
-        </div>
-
-        <div class="col-xl-3">
-          <img src="img/objectif3.svg">
-          <h1>Objectif 3</h1>
-          <p>Les tests d’évaluation ne sont pas toujours adaptés au public éloigné du marché de l’emploi, trop scolaires pour un public en rupture (échec scolaire, illétrisme…). Par ailleurs, les outils d’évaluation des compétences transversales existants sont généralement déclaratifs, et donc parfois éloigné de la réalité d’un candidat (survalorisation ou sousévaluation).</p>
         </div>
       </div>
 
-      <h2>Plus d'informations</h2>
-      <div class="row align-items-center">
-        <img src="img/informations.png">
-        <div class="col">
-          <a class="btn btn-primary" href="">Quelles compétences ?</a>
-          <a class="btn btn-primary" href="">Pour quels publics ?</a>
+      <div class="fond pt-5">
+        <div class="container">
+          <div class="row justify-content-between pt-5 pb-3">
+            <div class="col-xl-3">
+              <div class="objectif">
+                <div class="objectif-interieur d-flex align-items-center justify-content-center">
+                  <img src="img/objectif1.svg">
+                </div>
+              </div>
+              <h1 class="h3 text-white font-weight-bold mt-5-xl pt-5-xl">Objectif 1</h1>
+              <p class="lead">L’approche métier exclusive est désuète. L’économie se transforme et les compétences métiers ne suffisent plus, et deviennent parfois rapidement obsolètes. Les compétences cognitives et comportementales sont de plus en plus recherchées, les métiers nécessitent plus de transversalité et de mobilité professionnelle.</p>
+            </div>
+
+            <div class="col-xl-3">
+              <div class="objectif">
+                <div class="objectif-interieur d-flex align-items-center justify-content-center">
+                  <img src="img/objectif2.svg">
+                </div>
+              </div>
+              <h1 class="h3 text-white font-weight-bold mt-5-xl pt-5-xl">Objectif 2</h1>
+              <p class="lead">Le CV n’est plus suffisant pour évaluer les candidats. Ce dernier avantage d’emblée les candidats qui savent le mieux se présenter et les recruteurs disposent d’une image incomplète de l’individu qu’ils évaluent.</p>
+            </div>
+
+            <div class="col-xl-3">
+              <div class="objectif">
+                <div class="objectif-interieur d-flex align-items-center justify-content-center">
+                  <img src="img/objectif3.svg">
+                </div>
+              </div>
+              <h1 class="h3 text-white font-weight-bold mt-5-xl pt-5-xl">Objectif 3</h1>
+              <p class="lead">Les tests d’évaluation ne sont pas toujours adaptés au public éloigné du marché de l’emploi, trop scolaires pour un public en rupture (échec scolaire, illétrisme…). Par ailleurs, les outils d’évaluation des compétences transversales existants sont généralement déclaratifs, et donc parfois éloigné de la réalité d’un candidat (survalorisation ou sousévaluation).</p>
+            </div>
+
+          </div>
+
+          <div class="row mt-5 mb-2">
+            <div class="col-12 col-sm-6 col-md-8 text-center">
+              <h2>Plus d'informations</h2>
+            </div>
+          </div>
+
+          <div class="row align-items-center pb-5">
+            <div class="col-12 col-sm-6 col-md-8 text-center">
+              <img class="mw-100" src="img/informations.png">
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 button-infos">
+              <a class="btn btn-primary btn-lg w-100 text-left mb-2" href="">Quelles compétences ?</a>
+              <a class="btn btn-primary btn-lg w-100 text-left" href="">Pour quels publics ?</a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
-    <footer class="container pt-4">
-      <div class="row justify-content-between">
-        <div class="col">
-          <h1>Éva</h1>
-          <p>
-            Les statistiques d'usage ne sont pas encore disponibles.<br>
-            Le code source est libre.<br>
-            Le porteur administratif est le Haut-commissaire aux compétences et à l’inclusion par l’emploi.<br>
-            L'incubateur est L'Incubateur de Services Numériques.<br>
-          </p>
-          <p>
-            Contacter l’équipe.
-          </p>
+    <footer class="py-5 mt-5">
+      <div class="container pt-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+          <div>
+            <h1>Éva</h1>
+            <p>
+              Les statistiques d'usage ne sont pas encore disponibles.<br>
+              Le code source est libre.<br>
+              Le porteur administratif est le Haut-commissaire aux compétences et à l’inclusion par l’emploi.<br>
+              L'incubateur est L'Incubateur de Services Numériques.<br>
+            </p>
+            <p>
+              Contacter l’équipe.
+            </p>
+          </div>
+          <div class="d-flex align-items-center justify-content-md-end">
+            <img src="img/marianne.svg" class="bg-white">
+          </div>
         </div>
-        <img src="img/marianne.svg">
       </div>
     </footer>
   </body>
