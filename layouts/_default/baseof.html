@@ -26,12 +26,13 @@
 
       <div class="container pt-3 pb-5">
         <div class="row justify-content-between align-items-center">
-          <h1 class="col-2"><img src="/eva.svg" alt="eva" width="73px"></h1>
+          <h1 class="col-2"><a href="/"><img src="/eva.svg" alt="eva" width="73px"></a></h1>
 
           <nav class="col text-right">
-            <a class="ml-5 lien-menu" href="">Compétences</a>
-            <a class="ml-5 lien-menu" href="">Cas d'usages</a>
-            <a class="ml-5 lien-menu" href="">Produits</a>
+          {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+              <a class="ml-5 lien-menu {{ if $currentPage.IsMenuCurrent "main" . }}actif{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
           </nav>
         </div>
       </div>
