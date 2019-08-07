@@ -1,0 +1,78 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.lien-bleu {
+  color: #3999f1;
+}
+.lien-menu {
+  color: #1E416A;
+  font-weight: bold;
+}
+.lien-menu:hover {
+  color: #1E416A;
+}
+.titre {
+  color: #6E84FE;
+  font-weight: bold;
+  font-size: 64px;
+  position: relative;
+}
+.titre img {
+  position: relative;
+  top: -16px;
+}
+.lead {
+  color: #1E416A;
+  font-weight: normal;
+  font-size: 18px;
+}
+.fond {
+  background-image: url(/fond.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.objectif {
+  position: relative;
+  height: 250px;
+}
+.objectif-interieur {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  z-index: 5;
+}
+.objectif:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  left: 70px;
+  top: 50px;
+  width: 180px;
+  height: 180px;
+
+  background: linear-gradient(126.76deg, #1E416A 42.61%, rgba(216, 216, 216, 0) 83.55%);
+  mix-blend-mode: normal;
+  transform: rotate(13.5deg);
+}
+h2 {
+  color: #184670;
+}
+.button-infos {
+  position: relative;
+  left: -15%;
+}
+.btn-primary {
+  background-color: #6E84FE;
+  border: 0;
+  border-radius: 30px;
+}
+
+footer {
+  background-image: url(/footer.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: white;
+}

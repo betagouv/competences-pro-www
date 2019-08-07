@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ block "title" . }}
+
+      {{ .Site.Title }}
+      {{ end }}</title>
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">    
+  </head>
+  <body>
+
+    <header class="bg-light">
+
+      <div class="bg-white">
+        <div class="container">
+          <div class="row justify-content-between align-items-center py-2 ">
+            <span class="col text-muted">eva est une startup <a href="https://beta.gouv.fr/" class="lien-bleu">beta.gouv.fr</a></span>
+            <span class="col text-right">
+              <img src="/marianne.svg" width="60px">
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-3 pb-5">
+        <div class="row justify-content-between align-items-center">
+          <h1 class="col-2"><img src="/eva.svg" alt="eva" width="73px"></h1>
+
+          <nav class="col text-right">
+            <a class="ml-5 lien-menu" href="">Compétences</a>
+            <a class="ml-5 lien-menu" href="">Cas d'usages</a>
+            <a class="ml-5 lien-menu" href="">Produits</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="py-5 mt-5">
+      <div class="container pt-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+          <div>
+            <h1>Éva</h1>
+            <p>
+              Les statistiques d'usage ne sont pas encore disponibles.<br>
+              Le code source est libre.<br>
+              Le porteur administratif est le Haut-commissaire aux compétences et à l’inclusion par l’emploi.<br>
+              L'incubateur est L'Incubateur de Services Numériques.<br>
+            </p>
+            <p>
+              Contacter l’équipe.
+            </p>
+          </div>
+          <div class="d-flex align-items-center justify-content-md-end">
+            <img src="/marianne.svg" class="bg-white">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
