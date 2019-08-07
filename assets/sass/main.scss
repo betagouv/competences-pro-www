@@ -97,9 +97,11 @@ $blue-lien: #3999f1;
     }
   }
 }
-.button-infos {
-  position: relative;
-  left: -15%;
+@include media-breakpoint-up(md) {
+  .button-infos {
+    position: relative;
+    left: -15%;
+  }
 }
 
 footer {
