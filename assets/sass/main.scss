@@ -15,6 +15,11 @@ $headings-font-family: 'Quicksand', sans-serif;
 $blue-menu: #1E416A;
 $blue-titre2: #184670;
 $blue-lien: #3999f1;
+$green: #9ADBD0;
+
+.bg-green {
+  background-color: $green;
+}
 
 .menu-content.hidden {
   display: none !important;
@@ -57,7 +62,7 @@ $blue-lien: #3999f1;
   background-size: cover;
 }
 
-.objectif {
+.pastille {
   position: relative;
   height: 150px;
 
@@ -68,6 +73,7 @@ $blue-lien: #3999f1;
     z-index: 5;
     width: 130px;
     height: 130px;
+    overflow: hidden;
   }
 
   &:after {
@@ -87,7 +93,7 @@ $blue-lien: #3999f1;
 }
 
 @include media-breakpoint-up(md) {
-  .objectif {
+  .pastille {
     height: 250px;
 
     &-interieur {
@@ -100,6 +106,18 @@ $blue-lien: #3999f1;
       top: 50px;
       width: 180px;
       height: 180px;
+    }
+
+    &.pastille-xl {
+      .pastille-interieur {
+        width: 400px;
+        height: 400px;
+      }
+
+      &:after {
+        width: 400px;
+        height: 400px;
+      }
     }
   }
 }
