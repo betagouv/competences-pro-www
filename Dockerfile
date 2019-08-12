@@ -1,4 +1,4 @@
-FROM francois2/hugo-node
+FROM francois2/hugo-node AS build
 
 WORKDIR /app
 
