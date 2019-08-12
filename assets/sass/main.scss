@@ -55,6 +55,16 @@ $green: #9ADBD0;
   }
 }
 
+.lien-blanc {
+  color: $white;
+  text-decoration: underline;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
 .img-titre {
   position: relative;
   top: -16px;
