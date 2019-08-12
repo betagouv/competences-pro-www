@@ -1,12 +1,11 @@
-FROM buildpack-deps:curl AS build
-
-ENV VERSION 0.56.3
-
-RUN wget https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.deb \
-    && dpkg -i hugo_${VERSION}_Linux-64bit.deb
+FROM francois2/hugo-node
 
 WORKDIR /app
-COPY . /app
+
+COPY package.json package-lock.json ./
+RUN npm install
+
+COPY . ./
 RUN hugo
 
 FROM nginx:alpine
