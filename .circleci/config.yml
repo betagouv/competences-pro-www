@@ -7,3 +7,28 @@ jobs:
       - checkout
       - run: npm ci
       - run: hugo
+
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run: pip install ansible
+      - run: git clone git@github.com:betagouv/competences-pro-orchestrateur.git
+      - run:
+          working_directory: competences-pro-orchestrateur
+          command: echo ${DEPLOIEMENT_HOTE} > hotes
+      - run:
+          working_directory: competences-pro-orchestrateur
+          command: ansible-playbook --inventory=hotes --user=${DEPLOIEMENT_UTILISATEUR} --extra-vars="chemin_racine={{ansible_env.HOME}}/preprod hote_site=preview.competences-pro.beta.gouv.fr" site.yml
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
