@@ -115,6 +115,21 @@ $green: #9ADBD0;
 
     &.pastille-xl {
       .pastille-interieur {
+        width: 300px;
+        height: 300px;
+      }
+
+      &:after {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .pastille {
+    &.pastille-xl {
+      .pastille-interieur {
         width: 400px;
         height: 400px;
       }
@@ -126,6 +141,7 @@ $green: #9ADBD0;
     }
   }
 }
+
 @include media-breakpoint-up(md) {
   .button-infos {
     position: relative;
