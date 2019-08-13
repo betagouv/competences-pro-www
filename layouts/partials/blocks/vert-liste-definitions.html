@@ -1,0 +1,46 @@
+<div class="bg-green">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    style="fill:none"
+    version="1.1"
+    viewBox="0 0 1920 420"
+    height="420"
+    width="1920"
+    class="transition-verte">
+    <path
+      style="fill:#fbf9fa"
+      d="M 1920.0004,0.00206864 0.01960673,0.00630078 0,419.99609 c 0,0 51.5001,-132.491 376,-129.521 324.5,2.97 617.5,-90.251 1023.5,-121.436 406,-31.185 520.5,-156.689996 520.5,-156.689996 z" />
+  </svg>
+
+  <div class="container">
+    <h2 class="text-center text-white">{{ .entete.titre }}</h2>
+    <p class="lead text-center text-white">{{ .entete.contenu }}</p>
+
+    <div class="py-5">
+      {{ range $definitions := .definitions }}
+      <div class="row">
+        {{ $first := index $definitions 0 }}
+        <div class="col-md-2 order-md-2 text-md-center">
+          <img src="{{ $first.image }}" />
+        </div>
+        <div class="col-md-4 order-md-first">
+          <h3 class="text-white text-md-right">{{ $first.titre }}</h3>
+          <p class="lead text-md-right">{{ $first.contenu }}</p>
+        </div>
+
+        {{ $second := index $definitions 1 }}
+        {{ if $second }}
+          <div class="col-md-2 order-md-3 text-md-center">
+            <img src="{{ $second.image }}" />
+          </div>
+          <div class="col-md-4 order-md-last">
+            <h3 class="text-white">{{ $second.titre }}</h3>
+            <p class="lead">{{ $second.contenu }}</p>
+          </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</div>

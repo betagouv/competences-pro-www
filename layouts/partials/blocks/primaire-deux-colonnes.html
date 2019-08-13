@@ -1,0 +1,32 @@
+<div class="bg-primary">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style="fill:none"
+      version="1.1"
+      viewBox="0 0 1920 218"
+      class="transition-verte"
+      height="218"
+      width="1920">
+      <path
+        style="fill:#9adbd0"
+        d="M 1920,0 0,0 0,74 c 0,0 106,-57 278,-57 172,0 653,201 1058,201 404.5,0 583,-200 583,-200 z" />
+    </svg>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pastille pastille-xl">
+            <div class="pastille-interieur d-flex align-items-center justify-content-center">
+              <img src="{{ .image }}">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          {{ range $block := .blocks }}
+          <h2 class="text-white">{{ $block.titre }}</h2>
+          <p class="text-white lead">{{ safeHTML $block.contenu }} </p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+</div>

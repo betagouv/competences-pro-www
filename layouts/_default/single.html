@@ -3,15 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="bg-light pt-5">
-    <div class="container">
-      <h1 class="display-1 font-weight-bold text-primary">{{ .Params.Entete.Titre }}</h1>
-
-      <div class="row">
-        <p class="col col-xl-10 lead text-lead">{{ .Params.Entete.Contenu }}</p>
-      </div>
-    </div>
-  </div>
-
-  {{.Content}}
+  {{ range $block := .Params.Blocks }}
+    {{ partial (printf "blocks/%s.html" $block.nom) . }}
+  {{ end }}
 {{ end }}
