@@ -10,4 +10,5 @@ RUN hugo
 
 FROM nginx:alpine
 
+COPY gzip.conf /etc/nginx/conf.d
 COPY --from=build /app/public /usr/share/nginx/html/
