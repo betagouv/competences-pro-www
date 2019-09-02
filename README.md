@@ -17,6 +17,7 @@ Pour voir les autres projets de Compétences Pro:
 Ce site web est développé à l'aide d'[Hugo][hugo] que vous devez installer.
 
 ```
+npm install
 hugo server
 ```
 
