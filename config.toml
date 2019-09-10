@@ -2,4 +2,4 @@ baseURL = "/"
 languageCode = "fr-fr"
 title = "eva"
 [params]
-  contactMail = "competences-pro@beta.gouv.fr"
+  contactMail = "contact@eva.beta.gouv.fr"
