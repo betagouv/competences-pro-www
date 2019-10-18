@@ -1,10 +1,11 @@
 <div class="bg-light">
   {{ partial "transition.html" .transition }}
   <div class="container pt-5">
-    <h1 class="display-1 font-weight-bold text-primary">{{ safeHTML .titre }}</h1>
-
     <div class="row">
+      <h1 class="display-1 font-weight-bold text-primary">{{ safeHTML .titre }}</h1>
+    {{ if .contenu }}
       <p class="col col-xl-10 lead text-lead">{{ .contenu }}</p>
+    {{ end }}
     </div>
   </div>
 </div>

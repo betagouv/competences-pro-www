@@ -1,0 +1,27 @@
+<div class="bg-primary">
+  {{ partial "transition.html" .transition }}
+
+  <div class="container">
+    <h2 class="text-center text-white">{{ .entete.titre }}</h2>
+    <p class="lead text-center text-white">{{ .entete.contenu }}</p>
+
+    <div class="py-5">
+      {{ range $metiers := .metiers }}
+      <div class="row">
+        {{ $first := index $metiers 0 }}
+        <div class="col-md-4 order-md-first">
+          <li class="text-white">{{ $first.metier }}</li>
+        </div>
+
+        {{ $second := index $metiers 1 }}
+        {{ if $second }}
+          <div class="col-md-4 order-md-last">
+            <li class="text-white">{{ $second.metier }}</li>
+          </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</div>

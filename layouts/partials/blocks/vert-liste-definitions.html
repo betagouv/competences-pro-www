@@ -13,7 +13,7 @@
           <img src="{{ $first.image }}" />
         </div>
         <div class="col-md-4 order-md-first">
-          <h3 class="text-white text-md-right">{{ $first.titre }}</h3>
+          <a href="{{ $first.page }}"><h3 class="text-white text-md-right">{{ $first.titre }}</h3></a>
           <p class="lead text-md-right">{{ $first.contenu }}</p>
         </div>
 
@@ -23,7 +23,7 @@
             <img src="{{ $second.image }}" />
           </div>
           <div class="col-md-4 order-md-last">
-            <h3 class="text-white">{{ $second.titre }}</h3>
+            <a href="{{ $second.page }}"><h3 class="text-white">{{ $second.titre }}</h3></a>
             <p class="lead">{{ $second.contenu }}</p>
           </div>
         {{ end }}
