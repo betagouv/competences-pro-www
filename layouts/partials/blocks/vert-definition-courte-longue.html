@@ -2,10 +2,11 @@
   {{ partial "transition.html" .transition }}
   <div class="container">
     <div class="row">
-      <p class="col col-xl-10 lead text-lead">{{ .definition_courte }}</p>
+      <p class="col col-xl-8 lead text-lead">{{ .definition_courte }}</p>
     </div>
     <div class="row pt-5">
-      <p class="col col-xl-10 text-lead">{{ .definition_longue }}</p>
+      <p class="col col-xl-2"></p>
+      <div class="col col-xl-8 text-lead">{{ .definition_longue | markdownify }}</div>
     </div>
   </div>
 </div>
