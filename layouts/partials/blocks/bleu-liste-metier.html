@@ -9,14 +9,17 @@
       {{ range $metiers := .metiers }}
       <div class="row">
         {{ $first := index $metiers 0 }}
+        <div class="col-md-1 order-md-first"> </div>
         <div class="col-md-4 order-md-first">
-          <li class="text-white">{{ $first.metier }}</li>
+          <li class="text-white pb-3">{{ $first.metier }}</li>
         </div>
+
+        <div class="col-md-2 order-md-first"> </div>
 
         {{ $second := index $metiers 1 }}
         {{ if $second }}
           <div class="col-md-4 order-md-last">
-            <li class="text-white">{{ $second.metier }}</li>
+            <li class="text-white pb-3">{{ $second.metier }}</li>
           </div>
         {{ end }}
       </div>
