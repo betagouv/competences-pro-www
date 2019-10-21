@@ -75,6 +75,15 @@ $green: #9ADBD0;
 
 .lien-blanc {
   color: $white;
+
+  &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.lien-blanc-inverse {
+  color: $white;
   text-decoration: underline;
 
   &:hover {
