@@ -2,10 +2,17 @@
   {{ partial "transition.html" .transition }}
   <div class="container pt-5">
     <div class="row">
-      <h1 class="display-1 font-weight-bold text-primary">{{ safeHTML .titre }}</h1>
-    {{ if .contenu }}
-      <p class="col col-xl-10 lead text-lead">{{ .contenu }}</p>
-    {{ end }}
+      <h1 class="col-11 display-1 font-weight-bold text-primary">
+        {{ safeHTML .titre }}
+      </h1>
+      {{ if .image }}
+        <div class="col-1 text-right"><img src="{{ .image }}"></div>
+      {{ end }}
     </div>
+    {{ if .contenu }}
+      <div class="row">
+        <p class="col col-lg-10 lead text-lead">{{ .contenu }}</p>
+      </div>
+    {{ end }}
   </div>
 </div>
