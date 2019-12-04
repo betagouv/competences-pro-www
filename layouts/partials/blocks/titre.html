@@ -3,7 +3,7 @@
   <div class="container pt-5">
     <div class="row">
       <h1 class="col-11 display-1 font-weight-bold text-primary">
-        {{ safeHTML .titre }}
+        {{ .titre }}
       </h1>
       {{ if .image }}
         <div class="col-1 text-right"><img src="{{ .image }}"></div>
@@ -11,7 +11,7 @@
     </div>
     {{ if .contenu }}
       <div class="row">
-        <p class="col col-lg-10 lead text-lead">{{ .contenu }}</p>
+        <div class="col col-lg-10 lead text-lead">{{ .contenu | markdownify }}</div>
       </div>
     {{ end }}
   </div>
