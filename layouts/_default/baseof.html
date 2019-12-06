@@ -53,6 +53,7 @@
             {{ range .Site.Menus.main }}
               <a class="ml-5 font-weight-bold lien-menu {{ if $currentPage.IsMenuCurrent "main" . }}actif{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
             {{ end }}
+              <a class="btn btn-primary btn text-center ml-5 pl-4 pr-4" href="{{ .Site.Params.AppUrl }}">Accéder à eva</a>
           </nav>
         </div>
       </div>
