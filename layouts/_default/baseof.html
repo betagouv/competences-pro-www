@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Work+Sans&display=swap" rel="stylesheet">
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="shortcut icon" href="/favicon.svg">
     <!-- Matomo -->
     <script type="text/javascript">
       var _paq = window._paq || [];
