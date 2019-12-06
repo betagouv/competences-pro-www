@@ -138,6 +138,10 @@ $green: #9ADBD0;
   }
 }
 
+.icon-right {
+  float: right;
+}
+
 @include media-breakpoint-up(md) {
   .pastille {
     height: 250px;
