@@ -2,7 +2,7 @@
   {{ partial "transition.html" .transition }}
   <div class="container">
     <div class="row">
-      <p class="col col-lg-8 lead text-lead">{{ .definition_courte }}</p>
+      <div class="col col-lg-8 lead text-lead">{{ .definition_courte | markdownify }}</div>
     </div>
     <div class="row pt-5">
       <div class="offset-md-4 col col-xl-8 text-lead">{{ .definition_longue | markdownify }}</div>
