@@ -3,3 +3,4 @@ languageCode = "fr-fr"
 title = "eva"
 [params]
   contactMail = "contact@eva.beta.gouv.fr"
+  appUrl = "//app.eva.beta.gouv.fr"
