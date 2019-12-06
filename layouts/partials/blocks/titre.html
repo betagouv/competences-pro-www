@@ -14,5 +14,8 @@
         <div class="col col-lg-10 lead text-lead">{{ .contenu | markdownify }}</div>
       </div>
     {{ end }}
+    {{ if .lienApp }}
+      <a class="btn btn-primary btn w-25 text-left mb-2" href="//app.eva.beta.gouv.fr">Acceder à eva<img src="/fleche.svg" class="icon-right"></img></a>
+    {{ end }}
   </div>
 </div>
