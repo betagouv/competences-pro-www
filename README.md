@@ -24,7 +24,7 @@ hugo server
 ## Déployer avec docker
 
 ```
-docker build -t competences-pro-www . && docker run --rm -ti -p 3000:80 competences-pro-www
+docker build -t eva-www . && docker run --rm -ti -p 3000:80 eva-www
 ```
 
 ## Licence
