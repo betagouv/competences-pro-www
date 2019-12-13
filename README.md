@@ -1,16 +1,16 @@
-# Site vitrine de Compétences Pro
+# Site vitrine d'eva
 
-Ce dépôt contient le code source du site web vitrine du projet Compétences Pro (futur Eva).
+Ce dépôt contient le code source du site web vitrine du projet eva.
 
 Il est actuellement en cours d'intégration.
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-Pour voir les autres projets de Compétences Pro:
+Pour voir les autres projets de eva:
 
-- [la partie cliente](https://github.com/betagouv/competences-pro)
-- [la partie serveur](https://github.com/betagouv/competences-pro-serveur)
-- [la partie orchestration](https://github.com/betagouv/competences-pro-orchestrateur)
+- [la partie cliente](https://github.com/betagouv/eva)
+- [la partie serveur](https://github.com/betagouv/eva-serveur)
+- [la partie orchestration](https://github.com/betagouv/eva-orchestrateur)
 
 ## Usage en développement
 
