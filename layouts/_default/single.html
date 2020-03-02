@@ -6,4 +6,5 @@
   {{ range $block := .Params.Blocks }}
     {{ partial (printf "blocks/%s.html" $block.nom) . }}
   {{ end }}
+  {{.Content}}
 {{ end }}
