@@ -11,7 +11,7 @@
     </div>
     {{ if .contenu }}
       <div class="row">
-        <div class="col col-lg-10 lead text-lead">{{ .contenu | markdownify }}</div>
+        <div class="col col-lg-10 lead text-lead"><p>{{ .contenu }}</p></div>
       </div>
     {{ end }}
     {{ if .lienApp }}
