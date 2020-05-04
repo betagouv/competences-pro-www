@@ -120,6 +120,11 @@ $green: #9ADBD0;
     width: 130px;
     height: 130px;
     overflow: hidden;
+
+    .img-cover {
+      height: 100%;
+    }
+
   }
 
   &:after {
