@@ -11,13 +11,13 @@
     </div>
     {{ if .contenu }}
       <div class="row">
-        <div class="col col-lg-10 lead text-lead"><p>{{ .contenu }}</p></div>
+        <div class="col col-lg-10 lead text-lead">{{ .contenu | markdownify }}</div>
       </div>
     {{ end }}
     {{ if .lienApp }}
       <div class="row">
         <div class="col col-8 col-md-6 col-lg-4 lead text-lead">
-          <a class="btn btn-primary btn w-100 text-left pl-3" href="{{ site.Params.AppUrl }}">Accéder à eva<img src="/fleche.svg" class="icon-right"></img></a>
+          <a class="btn btn-primary btn w-100 text-left mt-3 pl-3" href="{{ site.Params.AppUrl }}">Accéder à eva<img src="/fleche.svg" class="icon-right"></img></a>
         </div>
       </div>
     {{ end }}
