@@ -1,6 +1,7 @@
 $enable-responsive-font-sizes: true;
 $gray-600: #8F8F8F;
 $blue: #6E84FE;
+$white: #FFF;
 $display1-size: 4rem;
 $lead-font-size: 1.125rem;
 $lead-font-weight: normal;
@@ -28,6 +29,11 @@ $green: #9ADBD0;
 
 .bg-green {
   background-color: $green;
+}
+.bg-primary {
+  a {
+    color: $white;
+  }
 }
 .fill-light {
   fill: $gray-100;
@@ -200,6 +206,21 @@ $green: #9ADBD0;
   .button-infos {
     position: relative;
     left: -15%;
+  }
+}
+
+table {
+  margin-bottom: 20px;
+  th, td {
+    padding: 10px;
+    border: 1px solid $white;
+  }
+  th {
+    color: $blue;
+    background-color: $white;
+    &:first-child {
+      border-right-color: $blue;
+    }
   }
 }
 
