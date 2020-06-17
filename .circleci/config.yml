@@ -1,28 +1,38 @@
-version: 2.1
 jobs:
   build:
     docker:
-      - image: francois2/hugo-node
+      - image: 'cimg/base:stable'
     steps:
       - checkout
+      - node/install:
+          install-yarn: true
+          node-version: latest
       - run: npm ci
+      - hugo/install:
+          version: '0.69.2'
       - run: hugo
-
   deploy:
+    docker:
+      - image: cibuilds/base
     steps:
-      - run:
-        - name: Déploiement
-        - command: |
-          rsync -avz -e "ssh" --progress public $SSH_USER@$SSH_HOST:$CIRCLE_BRANCH
-
+      - attach_workspace:
+          at: my-site
+      - add_ssh_keys:
+          fingerprints:
+            - '5d:ef:20:b9:49:df:ee:37:c8:87:22:0b:90:e3:63:10'
+      - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
+      - run: rsync -avce ssh my-site/ competences-pro@ssh-competences-pro.alwaysdata.net:www/$CIRCLE_BRANCH
+orbs:
+  node: circleci/node@3.0.0
+  hugo: circleci/hugo@0.2
+version: 2.1
 workflows:
-  version: 2
-  build-and-deploy:
+  main:
     jobs:
       - build
       - deploy:
-          requires:
-            - build
           filters:
             branches:
-              only: master
+              only: develop
+          requires:
+            - build
