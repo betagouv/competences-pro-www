@@ -4,3 +4,6 @@ title = "eva"
 [params]
   contactMail = "contact@eva.beta.gouv.fr"
   appUrl = "https://app.eva.beta.gouv.fr"
+[markup.goldmark.renderer]
+  unsafe= true
+
