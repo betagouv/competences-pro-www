@@ -6,7 +6,6 @@
       {{ .Site.Title }}
       {{ end }}</title>
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Work+Sans&display=swap" rel="stylesheet">
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     <link rel="shortcut icon" href="/favicon.svg">
