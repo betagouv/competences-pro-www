@@ -1,7 +1,10 @@
 $enable-responsive-font-sizes: true;
 $gray-600: #8F8F8F;
 $blue: #6E84FE;
+$bleu-fonce: #1E416A;
 $white: #FFF;
+$orange: #FDAF54;
+$green: #9ADBD0;
 $display1-size: 4rem;
 $lead-font-size: 1.125rem;
 $lead-font-weight: normal;
@@ -64,13 +67,18 @@ $headings-font-family: 'Quicksand', sans-serif;
 @import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/utilities";
 
-$blue-menu: #1E416A;
+$blue-menu: $bleu-fonce;
 $blue-titre2: #184670;
 $blue-lien: #3999f1;
-$green: #9ADBD0;
 
 .bg-green {
   background-color: $green;
+}
+.bg-orange {
+  background-color: $orange;
+}
+.bg-light {
+  background-color: $gray-100;
 }
 .bg-primary {
   a {
@@ -92,6 +100,17 @@ $green: #9ADBD0;
 .fill-primary {
   fill: $blue;
 }
+.fill-orange {
+  fill: $orange;
+}
+
+.text-bleu-fonce {
+  color: $bleu-fonce;
+}
+
+.text-orange {
+  color: $orange;
+}
 
 .transition-svg {
   width: 100%;
@@ -103,13 +122,13 @@ $green: #9ADBD0;
 }
 
 .text-lead {
-  color: $blue-menu;
+  color: $bleu-fonce;
 }
 .text-titre {
   color: $blue-titre2;
 }
 
-.lien-bleu {
+.lien-beta-gouv {
   color: $blue-lien;
   &:hover {
     color: $blue-lien;
@@ -212,6 +231,11 @@ $green: #9ADBD0;
   float: right;
 }
 
+.image-cas-usage {
+  width: 100%;
+  max-width: 180px;
+}
+
 @include media-breakpoint-up(md) {
   .pastille {
     height: 250px;
@@ -241,6 +265,7 @@ $green: #9ADBD0;
     }
   }
 }
+
 @include media-breakpoint-up(xl) {
   .pastille {
     &.pastille-xl {
