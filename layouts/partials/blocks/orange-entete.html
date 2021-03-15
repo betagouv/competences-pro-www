@@ -2,12 +2,9 @@
   {{ partial "transition.html" .transition }}
 
   <div class="container">
-    <div class="row">
-      <h2 class="text-white pt-4">{{ .titre }}</h2>
-    </div>
-
     <div class="row pt-5">
-      <div class="col col-lg-8 lead text-white">{{ .contenu | markdownify }}</div>
+      <div class="col col-lg-6 mb-md-0 mb-4 text-center"><img src="{{ .image }}" alt="" /></div>
+      <div class="col col-lg-6 mb-md-0 mb-4 lead text-bleu-fonce">{{ .contenu | markdownify }}</div>
     </div>
 
   </div>
