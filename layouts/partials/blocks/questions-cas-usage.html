@@ -3,10 +3,10 @@
     <div class="row py-5">
       <div class="col col-12 bg-light rounded p-5 text-bleu-fonce">
         <div class="row">
-          <div class="col col-lg-6 mb-4 text-primary d-none d-md-block">{{ .header_questions | markdownify }}
-          </div>
-          <div class="col col-lg-6 mb-4 text-primary d-none d-md-block">{{ .header_reponses | markdownify }}
-          </div>
+          <h5 class="col col-lg-6 mb-4 font-weight-bold text-dark-blue-grey d-none d-lg-block">{{ .header_questions }}
+          </h5>
+          <h5 class="col col-lg-6 mb-4 font-weight-bold text-dark-blue-grey d-none d-lg-block">{{ .header_reponses }}
+          </h5>
         </div>
         <div class="row">
           <div class="col col-12 col-lg-6 mb-4 lead">{{ .question1 | markdownify }}</div>
@@ -17,7 +17,7 @@
           <div class="col col-12 col-lg-6 mb-4">{{ .reponse2 | markdownify }}</div>
         </div>
         <div class="row mb-4">
-          <img src="{{ .image }}" class="image-reponsive" alt="" />
+          <img src="{{ .image }}" class="image-question-reponse" alt="" />
         </div>
         <div class="row">
           <div class="col col-12 col-lg-6 mb-4 lead">{{ .question3 | markdownify }}</div>
