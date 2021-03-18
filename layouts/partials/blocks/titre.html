@@ -2,7 +2,7 @@
   {{ partial "transition.html" .transition }}
   <div class="container pt-5">
     <div class="row">
-      <h1 class="col-11 display-1 font-weight-bold text-primary">
+      <h1 class="col-11 font-weight-bold text-primary">
         {{ .titre }}
       </h1>
       {{ if .image }}
@@ -14,10 +14,13 @@
         <div class="col col-lg-10 lead text-lead">{{ .contenu | markdownify }}</div>
       </div>
     {{ end }}
-    {{ if .lienApp }}
+    {{ if .lien }}
       <div class="row">
         <div class="col col-8 col-md-6 col-lg-4 lead text-lead">
-          <a class="btn btn-primary btn w-100 text-left mt-3 pl-3" href="{{ site.Params.AppUrl }}">Accéder à eva<img src="/fleche.svg" class="icon-right"></img></a>
+          <a class="btn btn-primary btn w-100 text-left mt-3 pl-3" href="{{ .lien }}">
+            {{ .titreLien }}
+            <img src="/fleche.svg" class="icon-right"></img>
+          </a>
         </div>
       </div>
     {{ end }}
