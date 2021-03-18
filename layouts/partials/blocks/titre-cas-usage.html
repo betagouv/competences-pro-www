@@ -14,9 +14,11 @@
         <h1 class="font-weight-bold text-bleu-fonce">
           {{ .nom_prenom_fonction }}
         </h1>
+        {{ if .citation }}
         <q class="text-primary h1 font-weight-bold">
           {{ .citation }}
         </q>
+        {{ end }}
       </div>
     </div>
   </div>
