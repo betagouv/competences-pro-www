@@ -3,7 +3,9 @@ languageCode = "fr-fr"
 title = "eva"
 [params]
   contactMail = "contact@eva.beta.gouv.fr"
-  appUrl = "https://app.eva.beta.gouv.fr"
+  AppUrl = "https://app.eva.beta.gouv.fr"
+  livestorm = "https://app.livestorm.co/eva-diagnostic-cptc/presentation-et-demonstration-eva-session?type=detailed"
+  libelleLivestorm = "Choisir une session de présentation"
 [markup.goldmark.renderer]
   unsafe= true
 

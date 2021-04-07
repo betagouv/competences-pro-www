@@ -14,12 +14,12 @@
         <div class="col col-lg-10 lead text-lead">{{ .contenu | markdownify }}</div>
       </div>
     {{ end }}
-    {{ if .lien }}
+    {{ if .lienLivestorm }}
       <div class="row">
         <div class="col col-8 col-md-6 col-lg-4 lead text-lead">
-          <a class="btn btn-primary btn w-100 text-left mt-3 pl-3" href="{{ .lien }}">
-            {{ .titreLien }}
-            <img src="/fleche.svg" class="icon-right"></img>
+          <a class="btn btn-primary btn w-100 text-left mt-3 pl-3" href="{{ site.Params.livestorm }}">
+            {{ site.Params.libelleLivestorm }}
+            <img src="/fleche.svg" class="icon-right"/>
           </a>
         </div>
       </div>
